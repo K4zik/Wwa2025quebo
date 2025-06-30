@@ -7,17 +7,16 @@
   <style>
     body {
       margin: 0;
-      padding: 0;
-      height: 100vh;
+      padding: 2rem 0;
+      min-height: 100vh;
       background: linear-gradient(-45deg, #2a003f, #4a007f, #6a00bf, #7f00ff);
       background-size: 400% 400%;
       animation: gradient 15s ease infinite;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       font-family: Arial, sans-serif;
-      position: relative;
-      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
     }
 
     @keyframes gradient {
@@ -26,20 +25,12 @@
       100% { background-position: 0% 50%; }
     }
 
-    /* TŁO Z LOGO */
-    body::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: url('PP-Logo-white.svg') no-repeat center center;
-      background-size: 40%;
-      opacity: 0.05; /* delikatne logo w tle */
-      z-index: 0;
+    .logo {
+      width: 200px;
+      margin-bottom: 1rem;
     }
 
     .container {
-      position: relative;
-      z-index: 1;
       width: 360px;
       height: 640px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
@@ -57,6 +48,10 @@
   </style>
 </head>
 <body>
+  <!-- LOGO NAD FILMEM -->
+  <img class="logo" src="PP-Logo-white.svg" alt="Logo" />
+
+  <!-- OKNO FILMU -->
   <div class="container">
     <video src="video.mp4" autoplay muted loop playsinline></video>
   </div>
