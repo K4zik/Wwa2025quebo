@@ -17,35 +17,59 @@
       display: flex; flex-direction: column;
       align-items: center; color: white;
     }
+
     @keyframes gradient {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
 
-    .logo { width: 200px; margin-bottom: 1rem; }
+    .logo {
+      width: 200px;
+      margin-bottom: 1rem;
+    }
 
     .container {
-      width: 360px; height: 640px;
+      width: 360px;
+      height: 640px;
       box-shadow: 0 0 20px rgba(0,0,0,0.4);
       border: 4px solid black;
       border-radius: 16px;
-      overflow: hidden; background: black;
+      overflow: hidden;
+      background: black;
     }
-    video { width: 100%; height: 100%; object-fit: cover; }
 
-   
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .caption {
+      margin-top: 1.5rem;
+      font-size: 1.8rem;
+      text-align: center;
+      text-shadow: 2px 2px 8px black;
+      color: white;
+    }
   </style>
 </head>
 <body>
+  <!-- Logo -->
   <img class="logo" src="PP-Logo-white.svg" alt="Logo" />
+
+  <!-- Wideo z Google Drive -->
   <div class="container">
-   <video>
-      <source src="https://drive.google.com/file/d/1QcC_zHQRYFJBP97OzCKkH5IytVPraXN5/view?usp=drive_link/s/yourlink/intro.mp4" type="video3.mp4">
+    <video controls autoplay muted loop playsinline>
+      <source src="https://drive.google.com/uc?export=download&id=1QcC_zHQRYFJBP97OzCKkH5IytVPraXN5" type="video/mp4">
+      Twoja przeglądarka nie obsługuje odtwarzania wideo.
     </video>
   </div>
-  <div class="caption">Wszystkiego Najlepszego Kochanie❤️</div>
+
+  <!-- Napis pod filmem -->
+  <div class="caption">Wszystkiego Najlepszego Kochanie ❤️</div>
 </body>
 </html>
+
 
 
